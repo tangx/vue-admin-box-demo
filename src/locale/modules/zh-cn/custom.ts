@@ -10,6 +10,9 @@ export default {
         // hello 模块， 对应 hello.vue
         zhangsan: {
             name: '张三的信息'
+        },
+        github: {
+            users: 'Github 用户信息'
         }
     }
 }
