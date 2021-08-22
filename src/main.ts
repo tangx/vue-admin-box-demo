@@ -10,9 +10,17 @@ import store from './store'
 import router from './router'
 import i18n from './locale'
 if (import.meta.env.MODE !== 'development') { // 非开发环境调用百度统计
-  baidu()
+    baidu()
 }
+
+import Config from './global/index'
+
+// create app
 const app = createApp(App)
+// provide and inject
+app.provide('Config', Config)
+
+
 app.use(ElementPlus, { size: store.state.app.elementSize })
 app.use(store)
 app.use(router)

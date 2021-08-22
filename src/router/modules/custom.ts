@@ -22,6 +22,11 @@ const route = [
                 path: 'github-users',
                 component: createNameComponent(() => import('@/views/main/custom/githubUser.vue')),
                 meta: { title: 'message.custom.github.users' }
+            },
+            {
+                path: 'global-config',
+                component: createNameComponent(() => import('@/views/main/custom/globalConfig.vue')),
+                meta: { title: 'message.custom.global.name' }
             }
         ]
     }

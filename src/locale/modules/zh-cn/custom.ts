@@ -13,6 +13,9 @@ export default {
         },
         github: {
             users: 'Github 用户信息'
+        },
+        global: {
+            name: "全局配置"
         }
     }
 }
