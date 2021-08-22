@@ -16,6 +16,9 @@ export default {
         },
         global: {
             name: "全局配置"
+        },
+        values: {
+            binding: '数据绑定'
         }
     }
 }

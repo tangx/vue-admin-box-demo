@@ -27,6 +27,11 @@ const route = [
                 path: 'global-config',
                 component: createNameComponent(() => import('@/views/main/custom/globalConfig.vue')),
                 meta: { title: 'message.custom.global.name' }
+            },
+            {
+                path: 'value-binding',
+                component: createNameComponent(() => import('@/views/main/custom/valueBinding.vue')),
+                meta: { title: 'message.custom.values.binding' }
             }
         ]
     }
