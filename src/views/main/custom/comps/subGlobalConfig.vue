@@ -20,8 +20,8 @@ export default defineComponent({
 
 
     // inject
-    const config = inject('Config') as Config
-    console.log(config);
+    const config = inject('config') as Config
+    // console.log(config);
 
 
     // return here

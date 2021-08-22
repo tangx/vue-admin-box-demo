@@ -13,12 +13,14 @@ if (import.meta.env.MODE !== 'development') { // 非开发环境调用百度统�
     baidu()
 }
 
-import Config from './global/index'
+import config from './global/index'
+import { initialConfig } from './global/index'
 
 // create app
 const app = createApp(App)
 // provide and inject
-app.provide('Config', Config)
+app.use(initialConfig)
+app.provide('config', config)
 
 
 app.use(ElementPlus, { size: store.state.app.elementSize })

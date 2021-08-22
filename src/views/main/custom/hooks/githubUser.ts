@@ -1,14 +1,21 @@
 import axios from 'axios'
+import config from '@/global/index'
+// import { Config } from '@/global/index'
 
 
 function search(keyword: string): Promise<User[]> {
+
     if (keyword.length < 1) {
         return
     }
 
-    return axios.get(`https://api.github.com/search/users?q=${keyword}`).then(
+    // let _gApi = `${config.GITHUB_API}/search/users?q=${keyword}`
+    // console.log(_gApi);
+
+
+    return axios.get(`${config.GITHUB_API}/search/users?q=${keyword}`).then(
         response => {
-            console.log('请求成功了')
+            // console.log('请求成功了')
             let users = response.data.items
 
             return users

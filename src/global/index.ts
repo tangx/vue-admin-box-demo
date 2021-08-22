@@ -7,9 +7,12 @@ export interface Config {
 
 const config = reactive(
     {
-        GITHUB_API: 'https://api.github.com'
+        GITHUB_API: ''
     } as Config
 )
-
-
 export default config
+
+
+export function initialConfig() {
+    config.GITHUB_API = 'https://api.github.com'
+}

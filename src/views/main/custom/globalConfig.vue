@@ -4,7 +4,7 @@
   <div>
     <h1>globalConfig</h1>
     <input type="text" :value="data.GITHUB_API" />
-    <button @click="changeApi">Chagne API</button>
+    <button @click="changeApi" disabled="true">Chagne API</button>
     <hr />
     <h1>{{ config.GITHUB_API }}</h1>
     <!-- <h3>{{ TEST_URL }}</h3> -->
@@ -16,6 +16,7 @@
 <script lang='ts'>
 import { defineComponent, inject, reactive } from 'vue'
 import subGlobalConfig from './comps/subGlobalConfig.vue';
+import { Config } from '@/global/index'
 
 export default defineComponent({
   components: {
@@ -29,7 +30,7 @@ export default defineComponent({
     })
 
     // inject
-    const config = inject('Config')
+    const config = inject('config') as Config;
     console.log(config);
 
     // code here
